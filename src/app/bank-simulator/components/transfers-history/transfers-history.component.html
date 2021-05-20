@@ -1,1 +1,30 @@
-<p>transfers-history works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-10 mx-auto">
+      <h1 class="pb-5">Historial</h1>
+      <table class="table border" *ngIf="transferHistory && transferHistory.length != 0; else elseBlock">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Nombre destinatario</th>
+            <th scope="col">Rut</th>
+            <th scope="col">Banco</th>
+            <th scope="col">Tipo de cuenta</th>
+            <th scope="col">Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transfer of transferHistory">
+            <td>{{transfer.recipient.name}}</td>
+            <td>{{transfer.recipient.rut}}</td>
+            <td>{{transfer.recipient.destinyBank}}</td>
+            <td>{{transfer.recipient.accountType}}</td>
+            <td>{{transfer.amount}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template #elseBlock>
+        <h3>No hay transferencias que mostrar</h3>
+      </ng-template>
+    </div>
+  </div>
+</div>
