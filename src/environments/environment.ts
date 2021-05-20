@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlBack: 'http://localhost:3000',
+  urlBack: 'https://backend-ripley.herokuapp.com/',
   urlBankListProvider: 'https://bast.dev/api/banks.php'
 };
 
