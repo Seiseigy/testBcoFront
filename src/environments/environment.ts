@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlBack: 'http://localhost:3000',
+  urlBankListProvider: 'https://bast.dev/api/banks.php'
 };
 
 /*
