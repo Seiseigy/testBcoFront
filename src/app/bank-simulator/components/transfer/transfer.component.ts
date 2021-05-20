@@ -33,7 +33,6 @@ export class TransferComponent implements OnInit {
       (res) => {
         if(res.status === 'ok') {
           this.recipientsList = res.data;
-          console.log(this.recipientsList);
         }
       },
       (error) => {
